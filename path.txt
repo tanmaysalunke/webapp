@@ -1,0 +1,4 @@
+cd Desktop/webapp/webappenv/Scripts/
+.\activate.bat
+
+C:\Users\HP\Desktop\webapp
