@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>::QUIZ::</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/css/w3.css">
+<link rel="stylesheet" href="static/css/circle.css">
+<script src="static/js/anychart-custom.min.js"></script>
+
+<style>
+  #question p{
+    top:150px;
+    left: 560px;
+    padding : 20px;
+    font-size: 22px;
+    position: absolute;
+}
+
+#choices{
+    width : 700px;
+    position: absolute;
+    top : 100px;
+    padding : 10px
+}
+.choice{
+    display: inline-block;
+    width : 190px;
+    font-size: 16px;
+    text-align: center;
+    border : 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    padding : 16px;
+    margin:10px;
+}
+.choice:hover{
+    border : 2px solid grey;
+    font-weight: bold;
+}
+#start{
+  font-family: "Comic Sans MS", sans-serif;
+}
+</style>
+
+<body>
+    <div class="w3-container w3-deep-purple">
+      <h1 class='w3'>Test Portal</h1>
+    </div>
+    <div class="w3-bar w3-amber">
+      <a class="w3-bar-item w3-btn w3-hover-brown w3-right">Hello,{{moodleid}}</a>
+    </div>
+ 
+    <div class="w3-row">
+      <div id="qncol" class="w3-col s2 w3-center w3-border-right w3-rightbar" style="height: 660px">
+        <div id="qno" style="display: none; left:50px;position: absolute;top:300px" id="div_loading_progress" class="c100 p0 w3-center w3-margin w3-sepia-min">
+          <span id="span_progress" class="w3-text-black">0%</span>
+          <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+        </div>
+        <div id="exit" class="w3-container" style="display: none;">
+          <a onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-red w3-left w3-margin w3-display-left w3-left" style="top: 70%;left: 2%; width: 10%">EXIT</a>
+        </div>
+        
+      </div>
+
+      <div class="w3-col s8">
+        <div id="start" class="w3-btn w3-block w3-center w3-green w3-round-xlarge" style="left:400px;top:250px;position:relative;width:26%;font-size:30px">Start</div>
+          <div id="quiz" class="w3-container w3-section" style="display: none">
+            <div id="question" class="w3-center" style="top:400px"></div>            
+            <div id="choices" class="w3-section w3-margin" style="top: 30%; left: 46%">
+              <div class="choice" id="never" onclick="storeAnswer('Never')"></div><br>
+              <div class="choice" id="rarely" onclick="storeAnswer('Rarely')"></div><br>
+              <div class="choice" id="often" onclick="storeAnswer('Often')"></div><br>
+              <div class="choice" id="always" onclick="storeAnswer('Always')"></div><br>
+            </div>
+
+            <div id="id01" class="w3-modal">
+              <div class="w3-modal-content w3-card-4 w3-animate-zoom w3-section" style="animation-duration: 0.5s">              
+                <div class="w3-container">
+                  <h5>Are you sure you want to quit?</h5>
+                  <a href="/dashboard" class="w3-red w3-btn w3-margin">YES</a>
+                  <span onclick="document.getElementById('id01').style.display='none'" class="w3-btn w3-card-4 w3-green w3-margin w3-right">NO</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button id="next" class="w3-btn w3-blue w3-right w3-display-bottomright w3-margin w3-round-xlarge w3-xlarge" style="bottom: 10%;right:10%;display:none;"disabled>NEXT</button>
+      </div>
+    </div>
+      <div id="container" class="w3-container w3-section" style="height:250px"></div>
+      <div id="container1" class="w3-container w3-section"></div>
+      <form>
+        <div id="score1" class="w3-center" style="top:400px"></div>
+        <div id="score2" class="w3-center" style="top:400px"></div>
+        <div id="score3" class="w3-center" style="top:400px"></div>
+        <div id="score4" class="w3-center" style="top:400px"></div>
+      </form>
+      <h3 id ="head" style="display: none;"class="w3-center"><b>Analysis:</b></h3>
+      <div id="analysis" class="w3-container w3-center"></div>
+      <div id="home" style="display: none;" class="w3-container w3-center"><a href="/dashboard" class="w3-btn w3-green">Home</a></div><br>
+    <script src="static/js/quiz.js"></script>
+    <script>
+    </script>
+</body>
+</html>

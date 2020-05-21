@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>::SIGNUP::</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/css/w3.css">
+<script src="/static/js/jquery-3.1.1.js"></script>
+<script src="/static/js/signupteacher.js"></script>
+<body>
+    <div class="w3-container w3-center w3-deep-purple w3-padding-32">
+      <h1>Emotional Health Parameteric Test</h1>
+    </div>
+
+    <div class="w3-bar w3-amber">
+      <a href="/" class="w3-bar-item w3-button w3-hover-brown">Home</a>
+      <a onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button w3-right w3-hover-brown">Project Info</a>
+      <a href="/login" class="w3-bar-item w3-button w3-hover-dropdown w3-right w3-hover-brown">Login</a>
+      <div class="w3-dropdown-hover w3-right">
+      <button class="w3-button w3-hover-brown w3-black">Register</button>
+        <div class="w3-dropdown-content w3-bar-block">
+          <a href="/portal" class="w3-bar-item w3-button w3-black">Student Login</a>
+          <a href="/teachersign" class="w3-bar-item w3-button w3-black">Teacher Login</a>
+        </div>
+      </div>
+    </div>
+
+      <div id="id01" class="w3-modal">
+          <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+
+            <div class="w3-center"><br>
+            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+            </div>
+            <div class="w3-container">
+                <p class='w3-center'>Designed by Amish Thekke Parambil and Tanmay Salunke<br>
+                  Don Bosco Institute of Technology, Kurla<br>
+                  Web Framework: Flask<br>
+                  Database: MySQL<br><br>
+                  Web Page Designing by HTML5,W3.CSS and JavaScript<br><br>
+                  Data Analysis and Visualisation using JavaScript (Anychart JS)</p>
+            </div>
+          </div>
+      </div>
+      
+    <div class="w3-row">
+      <form class="w3-col s8 w3-padding-large" >
+        <h3><b>TEACHER REGISTRATION</b></h3>
+        <label for="inputName" class="w3-text-teal w3-section"><b>Full Name</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="text" name="inputName" id="inputName" style="width:50%" required autofocus><br>
+
+        <label for="inputTeacherID" class="w3-text-teal w3-section"><b>TEACHER ID</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="text" name="inputTeacherID" id="inputTeacherID" style="width:50%" required autofocus><br>
+
+        <label for="inputPassword1" class="w3-text-teal w3-section"><b>Password</b></label>
+        <input class="w3-input w3-border w3-light-grey" type="password" name="inputPassword1" id="inputPassword1" style="width:50%" required>
+
+        <button id="btnSignUp1" class="w3-btn w3-blue-grey w3-section" type="button">REGISTER</button>
+      </form>
+
+      <div class="w3-col s4 w3-sand w3-leftbar w3-left w3-padding-64" style="height:520px">
+        <div class="w3-panel w3-sand w3-padding-32">
+        <p class="w3-xxlarge w3-serif w3-animate-right" style="animation-duration: 3s;"><i>“Sometimes the people around you won’t understand your journey. They don’t need to, it’s not for them.”</i></p>
+        <p class="w3-animate-right" style="animation-duration: 3s;"><b>-Joubert Botha</b></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-container w3-center w3-teal w3-bottom">
+      <p>Designed and Maintained by Amish and Tanmay<br>
+      © copyright DBIT</p>
+    </div>
+
+</body>
