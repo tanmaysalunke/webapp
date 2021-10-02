@@ -1,5 +1,4 @@
-
-
+CREATE DATABASE webtest;
 
 CREATE TABLE student_data(
     student_id VARCHAR(30) NOT NULL,
